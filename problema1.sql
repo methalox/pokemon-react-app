@@ -12,7 +12,7 @@ JOIN trainer_pokedex tp ON p.id = tp.pokemon_id
 JOIN trainer t ON tp.trainer_id = t.id
 JOIN pokemon_species_type pst ON ps.id = pst.pokemon_species_id
 JOIN pokemon_type pt ON pst.pokemon_type = pt.type
-WHERE t.name = 'Ash Ketchum'
+WHERE t.id = 1
 AND pt.type = 'Electric';
 
 -- Devolver último pokémon que haya capturado Brock
@@ -21,7 +21,7 @@ FROM pokemon p
 JOIN pokemon_species ps ON p.pokemon_species_id = ps.id
 JOIN trainer_pokedex tp ON p.id = tp.pokemon_id
 JOIN trainer t ON tp.trainer_id = t.id
-WHERE t.name = 'Brock'
+WHERE t.id = 2
 AND tp.captured_at = (
     SELECT MAX(captured_at)
     FROM trainer_pokedex
