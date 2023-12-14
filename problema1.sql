@@ -2,7 +2,7 @@
 SELECT t.id, t.name, COUNT(*)
 FROM trainer t
 JOIN trainer_pokedex tp ON t.id = tp.trainer_id
-GROUP BY t.id, t.name;
+GROUP BY t.id; -- Con agrupar por id basta, al ser primary key
 
 -- Devolver los pokémon de tipo Electric que haya capturado Ash Ketchum
 SELECT p.id, p.level, ps.name, tp.captured_at
