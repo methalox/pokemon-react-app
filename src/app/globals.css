@@ -8,14 +8,17 @@ html {
 }
 
 body {
-  background: rgb(163,163,163);
-  background: radial-gradient(circle, rgba(150,150,150,1) 0%, rgba(87,87,87,1) 100%);
+  background: rgb(163, 163, 163);
+  background: radial-gradient(
+    circle,
+    rgba(150, 150, 150, 1) 0%,
+    rgba(87, 87, 87, 1) 100%
+  );
   background-repeat: no-repeat;
 }
 
 .center {
   margin: auto;
-  width: 25%;
   padding: 20px;
 }
 
